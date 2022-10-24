@@ -1,0 +1,39 @@
+<main>
+  <p id="notice"></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+        <h2>User info</h2>
+        <div class="error_explanation">
+          <% if @user != nil %>
+            <% if @user.errors.any? %>
+              <h3><%= @user.errors.count %>errors prohibited this obj from being saved</h3>
+              <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          <% end %>
+        </div>
+        <%= form_with model: @user do |f| %>
+          <div class="form-group">
+            <label for="user_name">Name</label><br>
+            <%= f.text_field :name, autofocus: true, style: "width: 100%", id:"user_Name" %>
+          </div>
+          <div class="form-group">
+            <label for="user_mage">Image</label><br>
+            <%= f.file_field :profile_image, placeholder: "プロフィール画像", style: "width: 100%", accept: "image/*", id:"user_image" %>
+          </div>
+          <div class="form-group">
+            <label for="user_introduction">Introduction</label><br>
+            <%= f.text_area :introduction, style: "width: 100%", id:"user_introduction"%>
+          </div>
+          <div class="form-group">
+            <%= f.submit "Update User",class: "btn btn-secondary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
