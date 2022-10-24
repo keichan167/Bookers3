@@ -1,12 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DMM WEBCAMPコンテンツ「アプリケーションを作成してみよう:応用編」
+DMM WEBCAMPの学習コンテンツ「アプリケーションを作成してみよう:応用編」の研修課題3です。
 
-Things you may want to cover:
 
 * Ruby version
-
+  ruby 3.1.2p20
 * System dependencies
 
 * Configuration
