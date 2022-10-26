@@ -1,6 +1,6 @@
 # README
 
-DMM WEBCAMPの学習コンテンツの研修課題4です。
+#DMM WEBCAMPの学習コンテンツの研修課題4です。
 
 
 * Ruby version
