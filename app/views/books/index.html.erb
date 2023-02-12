@@ -2,7 +2,6 @@
   <div class="container px-5 px-sm-0">
     <p id="notice">
       <div class="error_explanation">
-        <% if @book != nil %>
           <% if @book.errors.any? %>
             <h3><%= @book.errors.count %>errors prohibited this obj from being saved</h3>
             <ul>
@@ -11,7 +10,6 @@
               <% end %>
             </ul>
           <% end %>
-        <% end %>
       </div>
     </p>
     <div class="row">
@@ -84,14 +82,14 @@
                     <p>
                       <%= link_to book_favorites_path(book), method: :delete do %>
                         <i class="fas fa-heart"></i>
-                        <%= book.favorites.count %> 
+                        <%= book.favorites.count %>
                       <% end %>
                     </p>
                     <% else %>
                     <p>
                       <%= link_to book_favorites_path(book), method: :post do %>
                         <i class="fas fa-heart"></i>
-                        <%= book.favorites.count %> 
+                        <%= book.favorites.count %>
                       <% end %>
                     </p>
                   <% end %>
